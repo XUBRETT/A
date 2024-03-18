@@ -2,7 +2,7 @@
 
 ITCC 11.1B ACT 4: BRETT RAINIEL ESPIRITU, KIAN PORRAS
 
-##FEATURES
+##F EATURES
 
 ## Client Management
 Add Client: Add new clients with their name, total billed amount, email, phone number, and address.
@@ -18,7 +18,7 @@ Update Service: Update service information including name and rate per hour.
 Delete Service: Delete a service from the system.
 
 
-## nvoice Management
+## Invoice Management
 Create Invoice: Create new invoices for clients with a specific date and total amount.
 Add Service to Invoice: Add services to an existing invoice along with the hours billed for each service.
 Update Service Hours in Invoice: Update the hours billed for a service in an invoice.
