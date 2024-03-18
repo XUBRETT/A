@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 8.0.36, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `brettdump` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `brettdump`;
+-- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
--- Host: localhost    Database: eleben
+-- Host: localhost    Database: brettdump
 -- ------------------------------------------------------
--- Server version	8.0.36
+-- Server version	8.2.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,7 +32,7 @@ CREATE TABLE `clients` (
   `address` text,
   `total_billed` decimal(10,2) DEFAULT '0.00',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +41,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (2,'BRTFYUNILE','brettychuyko@gmail.com','094517672673','cdo',4000.00),(32,'Kian Porras','kianfrancisp@gmail.com','09381451027','Ozamiz',1000.00);
+INSERT INTO `clients` VALUES (2,'BRTFYUNILE','brettychuyko@gmail.com','094517672673','cdo',4000.00),(32,'Kian Porras','kianfrancisp@gmail.com','09381451027','Ozamiz',1000.00),(33,'kian nigs','kiannigs@gmai.com','099919191','osamis',1000.00),(34,'nat','natenjo@gmail.com','0991234563','xavier estates',2909.00),(35,'zac baypt','zacbayot@gmail.com','0930293093','xe',38383.00);
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -86,7 +88,7 @@ CREATE TABLE `invoices` (
   PRIMARY KEY (`invoice_id`),
   KEY `client_id` (`client_id`),
   CONSTRAINT `invoices_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `clients` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -95,7 +97,7 @@ CREATE TABLE `invoices` (
 
 LOCK TABLES `invoices` WRITE;
 /*!40000 ALTER TABLE `invoices` DISABLE KEYS */;
-INSERT INTO `invoices` VALUES (2,32,'2024-12-18',8700.00);
+INSERT INTO `invoices` VALUES (2,32,'2024-12-18',8700.00),(3,34,'2004-03-09',9000.00);
 /*!40000 ALTER TABLE `invoices` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,4 +135,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-15 20:35:23
+-- Dump completed on 2024-03-18  8:22:18
