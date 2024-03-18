@@ -1,8 +1,8 @@
-#Virtual Invoice System
+# Virtual Invoice System
 
 ITCC 11.1B ACT 4: BRETT RAINIEL ESPIRITU, KIAN PORRAS
 
-##F EATURES
+## FEATURES
 
 ## Client Management
 Add Client: Add new clients with their name, total billed amount, email, phone number, and address.
